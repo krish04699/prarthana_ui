@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'clinic-app';
+  currentComponent: string = 'home';  // Default component is 'home'
+
+  // This method will change the currently active component
+  setActiveComponent(component: string) {
+    this.currentComponent = component;
+  }
 }

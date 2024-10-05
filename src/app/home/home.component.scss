@@ -1,0 +1,194 @@
+
+
+// .home-img
+// {
+//   opacity: 0.7;
+//   background-image: url("../../assets/home11.jpg");
+//   background-repeat:no-repeat;
+//   background-size: 80%;
+
+//   height:35em;
+//   // width:auto;
+//   object-fit: cover;
+// }
+
+.main-content
+{
+  margin-top: 5em;
+}
+.background-image {
+  position: relative;
+  background: url('../../assets/home11.jpg') no-repeat center center;
+  background-size: cover;
+  height: 80vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity */
+}
+
+.text-content {
+  position: absolute;
+  top: 40%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  color: white;
+ 
+}
+
+ /* Heading Animation */
+ .home-heading-animation {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1s ease-out forwards; /* Smooth entrance */
+}
+
+/* Text Animation */
+.home-text-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease-out forwards; /* Slight delay */
+  animation-delay: 0.5s;
+}
+
+/* Keyframes for Fade-in and Slide-up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+// about
+
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Left side carousel */
+.left-side {
+  flex: 1;
+  min-width: 300px; /* Minimum width for larger screens */
+  margin-right: 20px; /* Space between carousel and content */
+}
+
+.carousel-item {
+  display: none; /* Hide all items by default */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Show the first item by default */
+.carousel-item:first-child {
+  display: block;
+}
+
+/* Right side content */
+.right-side {
+  flex: 1;
+  min-width: 300px; /* Minimum width for larger screens */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .left-side {
+    margin-right: 0; /* Remove margin for smaller screens */
+    margin-bottom: 20px; /* Add margin below for spacing */
+  }
+
+  .right-side {
+    min-width: 100%; /* Take full width on smaller screens */
+  }
+}
+
+/* Common styles */
+.toggle-section {
+  margin-top: 20px;
+}
+
+.clickable {
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.clickable:hover {
+  color: #0056b3;
+}
+
+/* Animation styles */
+.vision-content {
+  margin-top: 10px;
+}
+
+
+// contact
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Map on the left side */
+.map-container {
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  margin-right: 20px; /* Adjust the gap between the map and the address */
+}
+
+/* Address on the right side */
+.address-container {
+  flex: 1;
+  min-width: 300px;
+  margin-left: 40px; /* Add a margin to move it further right */
+}
+
+.address-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.address-container p {
+  margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .map-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .address-container {
+    margin-left: 0;
+  }
+}

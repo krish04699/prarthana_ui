@@ -1,0 +1,50 @@
+<!-- <nav class="navbar">
+    <div class="navbar-brand">
+    
+        <img src="../../../assets/header_logo.png" alt="Logo" class="logo">
+        Prarthana Nature Cure
+    </div>
+    <div class="navbar-menu" [ngClass]="{'is-active': isMenuActive}">
+      <a href="#home" (click)="toggleMenu()">Home</a>
+      <a href="#about" (click)="toggleMenu()">About</a>
+      <a href="#treatments" (click)="toggleMenu()">Services</a>
+      <a href="#contact" (click)="toggleMenu()">Contact Us</a>
+    </div>
+    <div class="navbar-burger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+   -->
+<!-- Top Fixed Header -->
+<!-- Top Fixed Header -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="../../../assets/logo.png" alt="Logo">Prarthana Nature Cure
+      </a>
+      
+      <!-- Mobile toggle button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- Menu items -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav nav-menu-item">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/home']" [ngClass]="{ 'active': currentMenu === 'home' }" (click)="setActive('home')">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/about']" [ngClass]="{ 'active': currentMenu === 'about' }" (click)="setActive('about')">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/services']" [ngClass]="{ 'active': currentMenu === 'services' }" (click)="setActive('services')">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/contact']" [ngClass]="{ 'active': currentMenu === 'contact' }" (click)="setActive('contact')">Contact</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  
