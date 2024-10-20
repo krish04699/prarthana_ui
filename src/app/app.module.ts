@@ -11,6 +11,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { VisionComponent } from './vision/vision.component';
 import { ContactComponent } from './contact/contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -23,12 +24,14 @@ import { ContactComponent } from './contact/contact.component';
     ServicesComponent,
     AboutComponent,
     VisionComponent,
-    ContactComponent
+    ContactComponent,
+    
   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -18,79 +18,63 @@
 
 <div class="main-content">
     <section id="home">
+        <div class="p-3 m-0 border-0 m-0 border-0">
         <div class="background-image d-flex justify-content-center align-items-center">
             <div class="overlay"></div>
             <div class="text-content">
-              <h1 class="display-4 home-heading-animation">Discover the Power of Natural Healing</h1>
-              <p class="lead home-text-animation">Unlock your body’s innate ability to heal through holistic therapies and the wisdom of nature, guiding you towards renewed health and well-being
+              <p class="display-6 heading-animation">Discover the Power of Natural Healing</p>
+              <p class="lead text-animation">Unlock your body’s innate ability to heal through holistic therapies and the wisdom of nature, guiding you towards renewed health and well-being
               </p>
             </div>
+          </div>
           </div>
     </section>
   
     <section id="about">
-        <!-- <div class="p-3 m-0 border-0 bd-example m-0 border-0">
-
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                  <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                  <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
-                </div>
-                <div class="carousel-item">
-                  <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div> </div>-->
+        <div class="p-3 m-0 border-0 m-0 border-0">
+            <h1 class="heading-animation">Why Choose Us</h1>
             <div class="about-section">
                 <div class="left-side">
-                  <div class="carouselslide" data-bs-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="10000">
-                         <div *ngFor="let image of images; let i = index" 
-                         class="carousel-item" 
-                         [class.active]="i === currentImageIndex">
-                      <img [src]="image" alt="Carousel Image">
-                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
+                    <div class="carousel">
+                        <div *ngFor="let image of images; let i = index" 
+                             class="carousel-item" 
+                             [class.active]="i === currentImageIndex">
+                          <img [src]="image" alt="Carousel Image">
+                        </div>
+                  
+                        <!-- <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden" (click)="prevImage()">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden" (click)="nextImage()">Next</span>
+                          </button> -->
+
+                        <!-- Left and Right Buttons for Manual Navigation
+                        <button class="carousel-btn prev" (click)="prevImage()">&#10094;</button>
+                        <button class="carousel-btn next" (click)="nextImage()">&#10095;</button> -->
+                      </div>
                     </div>
-                    </div>
-                    </div>
-                  </div>
-                </div>
+
                 <div class="right-side">
-                  <h2>Why Choose Us</h2>
-                  <div class="content">
-                    <p>Here are some reasons to choose our services.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+ 
+                  <div class="content text-animation">
+                    <p>Choose natural healing that listens to your body. We offer personalized care with proven, holistic therapies. Experience wellness the way nature intended</p>
                   </div>
                   <div class="toggle-section">
                     <h3 (click)="toggleVision()" class="clickable">
                       Vision
                     </h3>
                     <div *ngIf="showVision" @fadeIn class="vision-content">
-                      <p>Our vision is to provide top-notch services.</p>
+                      <p>At our clinic, we envision a world where natural healing becomes the foundation for true wellness. Our vision is to guide individuals on a journey to optimal health by reconnecting them with the healing powers of nature. We strive to create a space where modern science meets ancient wisdom, offering sustainable, non-invasive treatments that empower the body to heal itself.</p>
+                      <p>
+                          Our ultimate goal is to foster a healthier, more balanced community, where people embrace preventive care, natural remedies, and lifestyle changes to achieve lasting well-being. With compassion and integrity, we aspire to be leaders in holistic health, setting a standard for natural, personalized healthcare</p>
                     </div>
                   </div>
                 </div>
               </div>
-              
+         </div>     
           
           
     </section>
@@ -99,67 +83,38 @@
         <div class="p-3 m-0 border-0 m-0 border-0">
         <h1>Find Our Services</h1>
         <h4>Find Relief at Prarthana Nature Cure Clinic Health Clinic</h4>
-        <div class=" row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card">
-                  <img src="../../../assets/weight_service.jpg" alt="Logo" class="logo">
-                <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg> -->
-                <div class="card-body">
-                  <h5 class="card-title">Weight Management</h5>
-                  <p class="card-text">Our team can help you achieve your weight loss goals through personalized diet and exercise plans, and medical interventions when needed.</p>
-                </div>
-              </div>
+        <!-- <div class=" row row-cols-1 row-cols-md-4 g-4">-->
+           
+
+        <div [@staggerAnimation]="isAnimationActive ? true : false" class="cards-container">
+          <div class="card" *ngFor="let card of cardData">
+            <img [src]="card.imgUrl" alt="Card Image" class="card-img"/>
+            <div class="card-body">
+              <h5 class="card-title">{{ card.title }}</h5>
+              <p class="card-text">
+                {{ card.description }}   </p>
             </div>
-            <div class="col">
-              <div class="card">
-                  <img src="../../../assets/mentalhealth.jpg" alt="Logo" class="logo">
-                <div class="card-body">
-                  <h5 class="card-title">Mental Health Management</h5>
-                  <p class="card-text">We offer a range of mental health services, including therapy and medication management, to support your mental wellbeing.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                  <img src="../../../assets/acupincture.jpg" alt="Logo" class="logo">
-                <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg> -->
-                <div class="card-body">
-                  <h5 class="card-title">Acupuncture</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                  <img src="../../../assets/Diabetes.jpg" alt="Logo" class="logo">
-                 <div class="card-body">
-                  <h5 class="card-title">Dibabetes</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-        
-            <div class="col">
-                <div class="card">
-                    <img src="../../../assets/backpain.jpg" alt="Logo" class="logo">
-                  <div class="card-body">
-                    <h5 class="card-title">Back Pain</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                    <img src="../../../assets/ozone.jpg" alt="Logo" class="logo">
-                    <div class="card-body">
-                    <h5 class="card-title">OZone Therapy</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  </div>
-                </div>
-              </div>
           </div>
         </div>
+        </div>
     </section>
+    <section id="doctor">
+      <div class="p-3 m-0 border-0 m-0 border-0">
+        <h1>Find Our Team</h1>
+
+    <div class="doctor-profiles">
+      <div class="profile" *ngFor="let doctor of doctors">
+        <img [src]="doctor.imageUrl" alt="{{doctor.name}}" class="profile-image">
+        <div class="profile-info">
+          <h3 class="profile-name">{{ doctor.name }}</h3>
+          <p class="profile-speciality">{{ doctor.speciality }}</p>
+          <p class="profile-description">{{ doctor.description }}</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    </section>
+    
   
     <section id="contact" style="margin-top: 50px;">
         <div class="contact-section">
@@ -179,13 +134,14 @@
             <div class="address-container">
               <h2>Location</h2>
               <p><strong>Address:</strong></p>
-              <p>Neelangarai, ECR Road, Chennai</p>
+              <p>No 3,1st floor,</p>
+              <p>Neelangarai, ECR Road, Chennai-600115</p>
           
               <p><strong>Email:</strong></p>
-              <p><a href="mailto:info@example.com">prarthanaturecuregmail.com</a></p>
+              <p><a href="prarthanaturecure@gmail.com">{{emailId}}</a></p>
           
               <p><strong>Phone:</strong></p>
-              <p>+61 123 456 789</p>
+              <p>+91 89397 05731</p>
           
               <p><strong>Business Hours:</strong></p>
               <p>Monday - Saturday: 10 AM to 9 PM</p>
