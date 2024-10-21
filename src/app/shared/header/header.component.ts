@@ -12,9 +12,16 @@ export class HeaderComponent {
   constructor(private router: Router) {}
 
   // Method to set the active menu and scroll to section
+
+
   setActive(menu: string): void {
     this.currentMenu = menu;
 
+    const element = document.getElementById(`${menu}-link`);
+    
+    // if (element) {
+    //   // Scroll to the element, trigger route change, or update UI
+    //   element.scrollIntoView({ behavior: 'smooth' });
     // Navigate to the specified route and scroll to the section
     this.router.navigate([menu]).then(() => {
       const element = document.getElementById(menu);

@@ -34,13 +34,13 @@ export class HomeComponent{
   images = [
     '../../../assets/img1.jpg',
     '../../../assets/img2.png',
-    '../../../assets/img.png',
+    '../../../assets/img3.png',
   ];
   
   isAnimationActive = false;
   emailId='prarthanaturecure@gmail.com';
   currentImageIndex = 0;
-  showVision = false;
+  showVision = true;
   autoSlideInterval: any;
  // @ViewChild('card', { static: true }) cardElement!: ElementRef;
   isActive = false;
@@ -94,14 +94,14 @@ constructor(){}
 
   this.doctors = [
     {
-      name: 'Dr. Gowtham',
-      speciality: 'BNYS,',
-      description: '',
+      name: 'Dr. Gouthaman Rangarajan, BNYS',
+      speciality: 'D.Ref., Cet.MBM (NIN), Cet.OT(NIN)',
+      description: 'Cet.Intergrative medicine(NIMHANS).,',
       imageUrl: '../../../assets/gowtham.jpg'  // Path to doctor image
     },
     {
-      name: 'Dr. Gayathritri',
-      speciality: 'BNYS',
+      name: 'Dr. Gayaththiri Saravanan, BNYS',
+      speciality: 'D.Ref., Cet.Pranic.Healing., Cet.OT(NIN)',
       description: '',
       imageUrl: '../../../assets/Gayathri.jpg'  // Path to doctor image
     }
@@ -113,7 +113,7 @@ constructor(){}
   startCarousel() {
     this.autoSlideInterval = setInterval(() => {
       this.nextImage();
-    }, 6000); // Change image every 3 seconds
+    }, 4000); // Change image every 3 seconds
   }
 
   // Move to the previous image
